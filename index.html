@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+
+<!--  -->
+  
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  Hello world
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recommendations</title>
+    <style>
+        /* Add basic styling for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        /* Style buttons */
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn-snack {
+            background-color: #ffd700;
+        }
+
+        .btn-meal {
+            background-color: #32cd32;
+        }
+
+        .btn-holiday {
+            background-color: #ff6347;
+        }
+
+        /* Style for displaying food recommendations */
+        #recommendations {
+            display: none;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Food Recommendations</h1>
+        <div class="btn-group">
+            <button class="btn btn-snack" onclick="showRecommendations('snack')">Snack</button>
+            <button class="btn btn-meal" onclick="showRecommendations('meal')">Meal</button>
+            <button class="btn btn-holiday" onclick="showRecommendations('holiday')">Holiday</button>
+        </div>
+        <div id="recommendations">
+            <h2>Recommended Food:</h2>
+            <ul>
+                <!-- JavaScript will populate this list based on the selected option -->
+            </ul>
+                <!-- Lyons city a city  -->
+      <div>
+        <p>      
+These recommendations include a variety of anti-inflammatory food options for snacks, meals, and holiday occasions. Please let us know if you'd like more specific recommendations or if you have any other questions related to anti-inflammatory foods or our Proof of concept application development.</p>
+      </div>
+        </div>
+      
+
+      
+    </div>
+
+    <script>
+        // Sample food recommendations based on the selected option
+        const recommendations = {
+           snack: [
+        "Blueberries",
+        "Greek Yogurt with Honey",
+        "Almonds",
+        "Carrot Sticks with Hummus",
+        "Cherry Tomatoes with Mozzarella",
+        "Sliced Cucumber with Tzatziki",
+        "Dark Chocolate (70% cocoa or higher)"
+    ],
+         meal: [
+        "Grilled Salmon with Quinoa",
+        "Turmeric and Ginger Lentil Soup",
+        "Spinach and Kale Salad with Walnuts",
+        "Baked Sweet Potato with Avocado",
+        "Chickpea and Vegetable Curry",
+        "Mushroom Risotto with Arborio Rice",
+        "Roasted Chicken with Herbs and Garlic"
+    ],
+    holiday: [
+        "Herb-Roasted Turkey",
+        "Mashed Cauliflower with Chives",
+        "Green Bean Almondine",
+        "Baked Apples with Cinnamon",
+        "Cranberry and Pomegranate Relish",
+        "Stuffed Acorn Squash with Quinoa",
+        "Mixed Berry Crisp (with oat topping)"
+    ]
+};
+
+
+
+
+
+
+
+
+
+        // Function to show food recommendations based on the selected option
+        function showRecommendations(option) {
+            const recommendationsList = document.querySelector('#recommendations ul');
+            recommendationsList.innerHTML = '';
+
+            recommendations[option].forEach(food => {
+                const listItem = document.createElement('li');
+                listItem.textContent = food;
+                recommendationsList.appendChild(listItem);
+            });
+
+            document.getElementById('recommendations').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+  <!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
