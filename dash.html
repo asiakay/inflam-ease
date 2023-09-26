@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti-Inflammatory Solutions</title>
+  <style>
+    /* Add basic styling for the layout */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    /* Style buttons */
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .btn-snack {
+      background-color: #ffd700;
+    }
+
+    .btn-meal {
+      background-color: #32cd32;
+    }
+
+    .btn-holiday {
+      background-color: #ff6347;
+    }
+
+    /* Style for displaying food recommendations */
+    #recommendations {
+      display: none;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>InflamEase: Click for 🍏 Options</h1>
+    
+    <div class="btn-group">
+      <button class="btn btn-snack" onclick="showRecommendations('snack')">Snack</button>
+      <button class="btn btn-meal" onclick="showRecommendations('meal')">Meal</button>
+      <button class="btn btn-holiday" onclick="showRecommendations('holiday')">Holiday</button>
+    </div>
+  
+    <div id="recommendations">
+      <ul>
+        <!-- JavaScript will populate this list based on the selected option -->
+      </ul>
+      <div>
+        <p>
+
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sample food recommendations based on the selected option
+    const recommendations = {
+      snack: [
+        {name: "Blueberries", emoji: "🍏"},
+        {name: "Greek Yogurt with Honey", emoji: "🥄"},
+        {name: "Almonds", emoji: "🌰"},
+        {name: "Carrot Sticks with Hummus", emoji: "🥕"},
+        {name: "Cherry Tomatoes with Mozzarella", emoji: "🍅"},
+        {name: "Sliced Cucumber with Tzatziki", emoji: "🥒"},
+        {name: "Dark Chocolate (70% cocoa or higher)", emoji: "🍫"},
+      ],
+      meal: [
+        {name: "Grilled Salmon with Quinoa", emoji: "🐟"},
+        {name: "Turmeric and Ginger Lentil Soup", emoji: "🍲"},
+        {name: "Spinach and Kale Salad with Walnuts", emoji: "🥗"},
+        {name: "Baked Sweet Potato with Avocado", emoji: "🍠"},
+        {name: "Chickpea and Vegetable Curry", emoji: "🍛"},
+        {name: "Mushroom Risotto with Arborio Rice", emoji: "🍄"},
+        {name: "Roasted Chicken with Herbs and Garlic", emoji: "🍗"}
+      ],
+      holiday: [
+        {name: "Herb-Roasted Turkey", emoji: "🦃"},
+        {name: "Mashed Cauliflower with Chives", emoji: "🥔"},
+        {name: "Green Bean Almondine", emoji: "🌱"},
+        {name: "Baked Apples with Cinnamon", emoji: "🍏"},
+        {name: "Cranberry and Pomegranate Relish", emoji: "🍇"},
+        {name: "Stuffed Acorn Squash with Quinoa", emoji: "🍠"},
+        {name: "Mixed Berry Crisp (with oat topping)", emoji: "🍓"}
+      ]
+    };
+
+    // Function to show food recommendations based on the selected option
+    function showRecommendations(option) {
+      const recommendationsList = document.querySelector('#recommendations ul');
+      recommendationsList.innerHTML = '';
+
+      recommendations[option].forEach(food => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${food.emoji} ${food.name}`;
+        recommendationsList.appendChild(listItem);
+      });
+
+      document.getElementById('recommendations').style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
